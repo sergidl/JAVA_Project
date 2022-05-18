@@ -1,0 +1,1 @@
+"%java_home%\bin\javadoc" -public -d "./javadoc" --module com.institutmvm.controller,cat.institutmvm.application --module-source-path "./*/src"
