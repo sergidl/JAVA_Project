@@ -25,26 +25,45 @@ public class InsertSQL {
 			Statement stmt = con.createStatement();
 
 			String sql = "INSERT INTO cartilaginos (especie, habitat, tempsNavegacio, genere, horaArribada, tamany, vent, nubositat, direccioVent, profunditat, temperaturaSuperficial, embarcacions, tipusEsquer, proshark, parasits, precenciaHams, numHams) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+			String count = "SELECT especie, COUNT(*) FROM cartilaginos GROUP BY especie";
+			String maxTamany = "SELECT MAX(tamany) FROM cartilaginos";
+			String minTamany = "SELECT MIN(tamany) FROM cartilaginos";
 			PreparedStatement preparedStmt = con.prepareStatement(sql);
+			Statement preparedCount = con.createStatement();
 			try {
-				preparedStmt.setString(1, a.getEspecie());
-				preparedStmt.setString(2, a.getHabitat());
-				preparedStmt.setString(3, a.getTempsNavegacio());
-				preparedStmt.setString(4, a.getGenere());
-				preparedStmt.setString(5, a.getHoraArribada());
-				preparedStmt.setFloat(6, a.getTamany());
-				preparedStmt.setString(7, a.getVent());
-				preparedStmt.setString(8, a.getNubositat());
-				preparedStmt.setString(9, a.getDireccioVent());
-				preparedStmt.setInt(10, a.getProfunditat());
-				preparedStmt.setInt(11, a.getTemperaturaSuperficial());
-				preparedStmt.setInt(12, a.getEmbarcacions());
-				preparedStmt.setString(13, a.getTipusEsquer());
-				preparedStmt.setBoolean(14, a.getProshark());
-				preparedStmt.setBoolean(15, a.getParasits());
-				preparedStmt.setBoolean(16, a.getPrecenciaHams());
-				preparedStmt.setInt(17, a.getNumHams());
-				preparedStmt.executeUpdate();
+				// preparedStmt.setString(1, a.getEspecie());
+				// preparedStmt.setString(2, a.getHabitat());
+				// preparedStmt.setString(3, a.getTempsNavegacio());
+				// preparedStmt.setString(4, a.getGenere());
+				// preparedStmt.setString(5, a.getHoraArribada());
+				// preparedStmt.setFloat(6, a.getTamany());
+				// preparedStmt.setString(7, a.getVent());
+				// preparedStmt.setString(8, a.getNubositat());
+				// preparedStmt.setString(9, a.getDireccioVent());
+				// preparedStmt.setInt(10, a.getProfunditat());
+				// preparedStmt.setInt(11, a.getTemperaturaSuperficial());
+				// preparedStmt.setInt(12, a.getEmbarcacions());
+				// preparedStmt.setString(13, a.getTipusEsquer());
+				// preparedStmt.setBoolean(14, a.getProshark());
+				// preparedStmt.setBoolean(15, a.getParasits());
+				// preparedStmt.setBoolean(16, a.getPrecenciaHams());
+				// preparedStmt.setInt(17, a.getNumHams());
+				// preparedStmt.executeUpdate();
+				ResultSet rs= preparedCount.executeQuery(count);
+				
+				while(rs.next()) {
+					System.out.println(rs.getString(1) + ": " + rs.getString(2));
+				}
+				ResultSet rs2= preparedCount.executeQuery(maxTamany);
+				System.out.println("\n");
+				while(rs2.next()) {
+					System.out.println("Max: " + rs2.getString(1));
+				}
+				ResultSet rs3= preparedCount.executeQuery(minTamany);
+				System.out.println("\n");
+				while(rs3.next()) {
+					System.out.println("Min: " + rs3.getString(1));
+				}
 				con.close();
 			} catch (Exception e) {
 				System.out.println(e);
