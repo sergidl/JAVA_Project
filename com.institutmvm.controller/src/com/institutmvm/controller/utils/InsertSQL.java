@@ -25,9 +25,6 @@ public class InsertSQL {
 			Statement stmt = con.createStatement();
 
 			String sql = "INSERT INTO cartilaginos (especie, habitat, tempsNavegacio, genere, horaArribada, tamany, vent, nubositat, direccioVent, profunditat, temperaturaSuperficial, embarcacions, tipusEsquer, proshark, parasits, precenciaHams, numHams) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
-			String count = "SELECT especie, COUNT(*) FROM cartilaginos GROUP BY especie";
-			String maxTamany = "SELECT MAX(tamany) FROM cartilaginos";
-			String minTamany = "SELECT MIN(tamany) FROM cartilaginos";
 			PreparedStatement preparedStmt = con.prepareStatement(sql);
 			Statement preparedCount = con.createStatement();
 			try {
@@ -49,19 +46,23 @@ public class InsertSQL {
 				// preparedStmt.setBoolean(16, a.getPrecenciaHams());
 				// preparedStmt.setInt(17, a.getNumHams());
 				// preparedStmt.executeUpdate();
-				ResultSet rs= preparedCount.executeQuery(count);
+
+				System.out.println(SelectSQL.SelectCount("cartilaginos",preparedCount));
 				
-				while(rs.next()) {
-					System.out.println(rs.getString(1) + ": " + rs.getString(2));
-				}
-				ResultSet rs2= preparedCount.executeQuery(maxTamany);
+
+				
+
+				String maxTamany = "SELECT MAX(tamany) FROM cartilaginos";
+				ResultSet rs2 = preparedCount.executeQuery(maxTamany);
 				System.out.println("\n");
-				while(rs2.next()) {
+				while (rs2.next()) {
 					System.out.println("Max: " + rs2.getString(1));
 				}
-				ResultSet rs3= preparedCount.executeQuery(minTamany);
+
+				String minTamany = "SELECT MIN(tamany) FROM cartilaginos";
+				ResultSet rs3 = preparedCount.executeQuery(minTamany);
 				System.out.println("\n");
-				while(rs3.next()) {
+				while (rs3.next()) {
 					System.out.println("Min: " + rs3.getString(1));
 				}
 				con.close();
