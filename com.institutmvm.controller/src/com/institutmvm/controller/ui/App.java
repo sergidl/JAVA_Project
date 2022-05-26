@@ -51,8 +51,8 @@ public class App {
 				default:
 					break;
 			}
-			JOptionPane.showMessageDialog(null, "S'ha introduït correctament", 
-			"Intoduit correctamente", JOptionPane.INFORMATION_MESSAGE);
+			JOptionPane.showMessageDialog(null, "Accio completada correctament", 
+			"Ending", JOptionPane.INFORMATION_MESSAGE);
 		} else {
 			System.out.println("Cancelled");
 		}
