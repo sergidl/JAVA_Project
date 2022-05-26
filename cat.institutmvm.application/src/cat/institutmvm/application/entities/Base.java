@@ -24,6 +24,8 @@ abstract class Base {
 
 	
 	/** 
+	 * Retorna l'especie
+	 * 
 	 * @return String
 	 */
 	public String getEspecie() {
@@ -31,6 +33,8 @@ abstract class Base {
 	}
 	
 	/** 
+	 * Assigna l'especie
+	 * 
 	 * @param especie
 	 */
 	public void setEspecie(String especie) {
@@ -39,6 +43,8 @@ abstract class Base {
 
 	
 	/** 
+	 * Retorna el habitat
+	 * 
 	 * @return String
 	 */
 	public String getHabitat() {
@@ -46,6 +52,8 @@ abstract class Base {
 	}
 	
 	/** 
+	 * Assigna el habitat
+	 * 
 	 * @param habitat
 	 */
 	public void setHabitat(String habitat) {
@@ -54,6 +62,8 @@ abstract class Base {
 
 	
 	/** 
+	 * Retorna el temps de navegació
+	 * 
 	 * @return String
 	 */
 	public String getTempsNavegacio() {
@@ -61,6 +71,8 @@ abstract class Base {
 	}
 	
 	/** 
+	 * Assigna el temps de navegació
+	 * 
 	 * @param tempsNavegacio
 	 */
 	public void setTempsNavegacio(String tempsNavegacio) {
@@ -69,6 +81,8 @@ abstract class Base {
 
 	
 	/** 
+	 * Retorna el genere
+	 * 
 	 * @return String
 	 */
 	public String getGenere() {
@@ -76,6 +90,8 @@ abstract class Base {
 	}
 	
 	/** 
+	 * Assigna el genere
+	 * 
 	 * @param genere
 	 */
 	public void setGenere(String genere) {
@@ -84,6 +100,8 @@ abstract class Base {
 
 	
 	/** 
+	 * Retorna l'hora d'arribada
+	 * 
 	 * @return String
 	 */
 	public String getHoraArribada() {
@@ -91,6 +109,8 @@ abstract class Base {
 	}
 	
 	/** 
+	 * Assigna l'hora d'arribada
+	 * 
 	 * @param horaArribada
 	 */
 	public void setHoraArribada(String horaArribada) {
@@ -99,6 +119,8 @@ abstract class Base {
 
 	
 	/** 
+	 * Retorna el tamany
+	 * 
 	 * @return float
 	 */
 	public float getTamany() {
@@ -106,6 +128,8 @@ abstract class Base {
 	}
 	
 	/** 
+	 * Assigna el tamany
+	 * 
 	 * @param tamany
 	 */
 	public void setTamany(float tamany) {
@@ -114,6 +138,8 @@ abstract class Base {
 
 	
 	/** 
+	 * Retorna el vent
+	 * 
 	 * @return String
 	 */
 	public String getVent() {
@@ -121,6 +147,8 @@ abstract class Base {
 	}
 	
 	/** 
+	 * Assigna el vent
+	 * 
 	 * @param vent
 	 */
 	public void setVent(String vent) {
@@ -129,6 +157,8 @@ abstract class Base {
 	
 	
 	/** 
+	 * Retorna la nubositat
+	 * 
 	 * @return String
 	 */
 	public String getNubositat() {
@@ -136,6 +166,8 @@ abstract class Base {
 	}
 	
 	/** 
+	 * Assigna la nubositat
+	 * 
 	 * @param nubositat
 	 */
 	public void setNubositat(String nubositat) {
@@ -144,6 +176,8 @@ abstract class Base {
 
 	
 	/** 
+	 * Retorna la direcció del vent
+	 * 
 	 * @return String
 	 */
 	public String getDireccioVent() {
@@ -151,12 +185,11 @@ abstract class Base {
 	}
 	
 	/** 
+	 * Assigna la direcció del vent
+	 * 
 	 * @param direccioVent
 	 */
 	public void setDireccioVent(String direccioVent) {
 		this.direccioVent = direccioVent;
 	}
-
-	public void insertSQL(){};
-
 }

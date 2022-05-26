@@ -19,6 +19,8 @@ public class Molusc extends Base {
 
 	
 	/** 
+	 * Retorna la profunditat
+	 * 
 	 * @return int
 	 */
 	public int getProfunditat() {
@@ -26,6 +28,8 @@ public class Molusc extends Base {
 	}
 	
 	/** 
+	 * Assigna la profunditat
+	 * 
 	 * @param profunditat
 	 */
 	public void setProfunditat(int profunditat) {
@@ -34,6 +38,8 @@ public class Molusc extends Base {
 
 	
 	/** 
+	 * Retorna la temperatura superficial
+	 * 
 	 * @return int
 	 */
 	public int getTemperaturaSuperficial() {
@@ -41,6 +47,8 @@ public class Molusc extends Base {
 	}
 	
 	/** 
+	 * Assigna la temperatura superficial
+	 * 
 	 * @param temperaturaSuperficial
 	 */
 	public void setTemperaturaSuperficial(int temperaturaSuperficial) {
@@ -49,6 +57,8 @@ public class Molusc extends Base {
 
 	
 	/** 
+	 * Retorna el nombre d'embarcacions
+	 * 
 	 * @return int
 	 */
 	public int getEmbarcacions() {
@@ -56,6 +66,8 @@ public class Molusc extends Base {
 	}
 	
 	/** 
+	 * Assigna el nombre d'embarcacions
+	 * 
 	 * @param embarcacions
 	 */
 	public void setEmbarcacions(int embarcacions) {
@@ -64,6 +76,8 @@ public class Molusc extends Base {
 
 	
 	/** 
+	 * Retorna si hi ha parasits
+	 * 
 	 * @return boolean
 	 */
 	public boolean getParasits() {
@@ -71,6 +85,8 @@ public class Molusc extends Base {
 	}
 	
 	/** 
+	 * Assigna si hi ha parasits
+	 * 
 	 * @param parasits
 	 */
 	public void setParasits(boolean parasits) {
@@ -79,6 +95,8 @@ public class Molusc extends Base {
 
 	
 	/** 
+	 * Retorna una cadena de caràcters amb les dades del molusc
+	 * 
 	 * @return String
 	 */
 	public String toString() {

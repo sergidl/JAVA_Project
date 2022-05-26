@@ -9,18 +9,10 @@ import com.institutmvm.controller.utils.InsertSQL;
 import com.institutmvm.controller.utils.Values;
 import javax.swing.*;
 
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.nio.file.StandardOpenOption;
 
 import java.awt.*;
-import java.lang.reflect.Array;
 
 public class Forms {
-	static Path path = Paths.get(".\\data.txt");
-
 	private static JRadioButton radio_pro1, radio_pro2;
 	private static JRadioButton radio_par1, radio_par2;
 	private static JRadioButton radio_ham1, radio_ham2;
@@ -37,6 +29,8 @@ public class Forms {
 	private static Values values = new Values();
 
 	/**
+	 * Genera el formulari amb les dades comunes a tots amb la mida introduïda
+	 * 
 	 * @param rows
 	 * @param cols
 	 * @return JPanel
@@ -74,6 +68,9 @@ public class Forms {
 		return panel2;
 	}
 
+	/**
+	 * Genera el formulari especific per la classe Cartilaginos
+	 */
 	public static void CartilaginosForm() {
 
 		JPanel panel2 = BaseFrom(20, 2);
@@ -103,7 +100,6 @@ public class Forms {
 		radio_pro1 = new JRadioButton("Si");
 		radio_pro2 = new JRadioButton("No");
 
-		// this
 		radio_pro1.addChangeListener(l -> {
 			if (radio_pro1.isSelected()) {
 				radio_pro2.setSelected(false);
@@ -153,7 +149,6 @@ public class Forms {
 		JTextField numHams = new JTextField();
 		numHams.setEnabled(false);
 
-		// this
 		radio_ham1.addChangeListener(l -> {
 			if (radio_ham1.isSelected()) {
 				numHams.setText("");
@@ -161,7 +156,6 @@ public class Forms {
 				radio_ham2.setSelected(false);
 			}
 		});
-		// this
 		radio_ham2.addChangeListener(l -> {
 			if (radio_ham2.isSelected()) {
 				numHams.setEnabled(false);
@@ -174,7 +168,6 @@ public class Forms {
 		int result3 = JOptionPane.showConfirmDialog(null, panel2, "Cartilaginos",
 				JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE);
 
-		// verificar que todos los campos esten llenos
 		if (result3 == JOptionPane.OK_OPTION) {
 			if (especie.getText().isEmpty() || habitat.getText().isEmpty() || tempsNavegacio.getText().isEmpty()
 					|| genere.getText().isEmpty() || horaArribada.getText().isEmpty() || tamany.getText().isEmpty()
@@ -190,7 +183,6 @@ public class Forms {
 
 			} else {
 
-				// verificar que los campos sean float
 				if (values.isFloat(tamany.getText()) && values.isInt(profunditat.getText()) && values.isInt(temperaturaSuperficial.getText())
 						&& values.isInt(embarcacions.getText()) && values.isInt(numHams.getText())) {
 
@@ -205,12 +197,7 @@ public class Forms {
 							Integer.parseInt(profunditat.getText()), Integer.parseInt(temperaturaSuperficial.getText()),
 							Integer.parseInt(embarcacions.getText()), tipusEsquer.getText(),
 							proshark, parasits, precenciaHams, Integer.parseInt(numHams.getText()));
-					String question = cartilaginosos.toString() + "\n";
-					try {
-						Files.write(path, question.getBytes(), StandardOpenOption.APPEND);
-					} catch (IOException e) {
-						e.printStackTrace();
-					}
+					
 					InsertSQL insertSQL = new InsertSQL();
 
 					insertSQL.insertSQL(cartilaginosos);
@@ -226,6 +213,9 @@ public class Forms {
 		}
 	}
 
+	/**
+	 * Genera el formulari especific per la classe Alga
+	 */
 	public static void AlgaForm() {
 
 		JPanel panel2 = BaseFrom(11, 3);
@@ -257,12 +247,7 @@ public class Forms {
 							vent.getText(), nubositat.getText(), direccioVent.getText(),
 							Integer.parseInt(profunditat.getText()),
 							Integer.parseInt(temperaturaSuperficial.getText()));
-					String question = alga.toString() + "\n";
-					try {
-						Files.write(path, question.getBytes(), StandardOpenOption.APPEND);
-					} catch (IOException e) {
-						e.printStackTrace();
-					}
+					
 					InsertSQL insertSQL = new InsertSQL();
 
 					insertSQL.insertSQL(alga);
@@ -277,6 +262,9 @@ public class Forms {
 		}
 	}
 
+	/**
+	 * Genera el formulari especific per la classe Molusc
+	 */
 	public static void MoluscForm() {
 
 		JPanel panel2 = BaseFrom(14, 3);
@@ -334,12 +322,7 @@ public class Forms {
 							Integer.parseInt(profunditat.getText()),
 							Integer.parseInt(temperaturaSuperficial.getText()),
 							Integer.parseInt(embarcacions.getText()), radio_par1.isSelected());
-					String question = molusc.toString() + "\n";
-					try {
-						Files.write(path, question.getBytes(), StandardOpenOption.APPEND);
-					} catch (IOException e) {
-						e.printStackTrace();
-					}
+					
 					InsertSQL insertSQL = new InsertSQL();
 
 					insertSQL.insertSQL(molusc);
@@ -354,6 +337,9 @@ public class Forms {
 		}
 	}
 
+	/**
+	 * Genera el formulari especific per la classe Ocell
+	 */
 	public static void OcellForm() {
 
 		JPanel panel2 = BaseFrom(12, 3);
@@ -368,7 +354,6 @@ public class Forms {
 		radio_par1 = new JRadioButton("Si");
 		radio_par2 = new JRadioButton("No");
 
-		// this
 		radio_par1.addChangeListener(l -> {
 			if (radio_par1.isSelected()) {
 				radio_par2.setSelected(false);
@@ -376,7 +361,6 @@ public class Forms {
 		});
 		panel2.add(radio_par1);
 
-		// this
 		radio_par2.addChangeListener(l -> {
 			if (radio_par2.isSelected()) {
 				radio_par1.setSelected(false);
@@ -401,12 +385,7 @@ public class Forms {
 							genere.getText(), horaArribada.getText(), Float.parseFloat(tamany.getText()),
 							vent.getText(), nubositat.getText(), direccioVent.getText(),
 							Integer.parseInt(embarcacions.getText()), radio_par1.isSelected());
-					String question = ocell.toString() + "\n";
-					try {
-						Files.write(path, question.getBytes(), StandardOpenOption.APPEND);
-					} catch (IOException e) {
-						e.printStackTrace();
-					}
+					
 					InsertSQL insertSQL = new InsertSQL();
 
 					insertSQL.insertSQL(ocell);

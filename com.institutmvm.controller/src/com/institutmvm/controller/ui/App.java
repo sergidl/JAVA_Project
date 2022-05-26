@@ -8,6 +8,8 @@ import java.awt.*;
 public class App {
 	
 	/** 
+	 * Crea una finestra per sel·leccionar el formulari específic
+	 * 
 	 * @param args
 	 * @throws Exception
 	 */
@@ -22,7 +24,6 @@ public class App {
 		int result = JOptionPane.showConfirmDialog(null, panel, "Tipus",
 				JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE);
 
-		// after the user clicks OK, the dialog is hidden and the program continues
 		if (result == JOptionPane.OK_OPTION) {
 			System.out.println("OK");
 			System.out.println(combo.getSelectedItem());
@@ -50,6 +51,8 @@ public class App {
 				default:
 					break;
 			}
+			JOptionPane.showMessageDialog(null, "S'ha introduït correctament", 
+			"Intoduit correctamente", JOptionPane.INFORMATION_MESSAGE);
 		} else {
 			System.out.println("Cancelled");
 		}

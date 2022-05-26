@@ -25,6 +25,8 @@ public class Cartilaginos extends Base {
 
 	
 	/** 
+	 * Retorna la profunditat
+	 * 
 	 * @return int
 	 */
 	public int getProfunditat() {
@@ -33,6 +35,8 @@ public class Cartilaginos extends Base {
 
 	
 	/** 
+	 * Assigna la profunditat
+	 * 
 	 * @param profunditat
 	 */
 	public void setProfunditat(int profunditat) {
@@ -41,6 +45,8 @@ public class Cartilaginos extends Base {
 
 	
 	/** 
+	 * Retorna la temperatura superficial
+	 * 
 	 * @return int
 	 */
 	public int getTemperaturaSuperficial() {
@@ -49,6 +55,8 @@ public class Cartilaginos extends Base {
 
 	
 	/** 
+	 * Assigna la temperatura superficial
+	 * 
 	 * @param temperaturaSuperficial
 	 */
 	public void setTemperaturaSuperficial(int temperaturaSuperficial) {
@@ -57,6 +65,8 @@ public class Cartilaginos extends Base {
 
 	
 	/** 
+	 * Retorna el numero d'embarcacions
+	 * 
 	 * @return int
 	 */
 	public int getEmbarcacions() {
@@ -65,6 +75,8 @@ public class Cartilaginos extends Base {
 
 	
 	/** 
+	 * Assigna el numero d'embarcacions
+	 * 
 	 * @param embarcacions
 	 */
 	public void setEmbarcacions(int embarcacions) {
@@ -73,6 +85,8 @@ public class Cartilaginos extends Base {
 
 	
 	/** 
+	 * Retorna el numero de hams
+	 * 
 	 * @return int
 	 */
 	public int getNumHams() {
@@ -81,6 +95,8 @@ public class Cartilaginos extends Base {
 
 	
 	/** 
+	 * Assigna el numero de hams
+	 * 
 	 * @param numHams
 	 */
 	public void setNumHams(int numHams) {
@@ -89,6 +105,8 @@ public class Cartilaginos extends Base {
 
 	
 	/** 
+	 * Retorna el tipus d'esquer
+	 * 
 	 * @return String
 	 */
 	public String getTipusEsquer() {
@@ -97,6 +115,8 @@ public class Cartilaginos extends Base {
 
 	
 	/** 
+	 * Assigna el tipus d'esquer
+	 * 
 	 * @param tipusEsquer
 	 */
 	public void setTipusEsquer(String tipusEsquer) {
@@ -105,6 +125,8 @@ public class Cartilaginos extends Base {
 
 	
 	/** 
+	 * Retorna si es proshark
+	 * 
 	 * @return boolean
 	 */
 	public boolean getProshark() {
@@ -113,6 +135,8 @@ public class Cartilaginos extends Base {
 
 	
 	/** 
+	 * Assigna si es proshark
+	 * 
 	 * @param proshark
 	 */
 	public void setProshark(boolean proshark) {
@@ -121,6 +145,8 @@ public class Cartilaginos extends Base {
 
 	
 	/** 
+	 * Retorna si hi ha parasits
+	 * 
 	 * @return boolean
 	 */
 	public boolean getParasits() {
@@ -129,6 +155,8 @@ public class Cartilaginos extends Base {
 
 	
 	/** 
+	 * Assigna si hi ha parasits
+	 * 
 	 * @param parasits
 	 */
 	public void setParasits(boolean parasits) {
@@ -137,6 +165,8 @@ public class Cartilaginos extends Base {
 
 	
 	/** 
+	 * Retorna si hi ha precencia de hams
+	 * 
 	 * @return boolean
 	 */
 	public boolean getPrecenciaHams() {
@@ -145,6 +175,8 @@ public class Cartilaginos extends Base {
 
 	
 	/** 
+	 * Assigna si hi ha precencia de hams
+	 * 
 	 * @param precenciaHams
 	 */
 	public void setPrecenciaHams(boolean precenciaHams) {
@@ -153,6 +185,8 @@ public class Cartilaginos extends Base {
 
 	
 	/** 
+	 * Retorna una cadena de caràcters amb les dades del cartilaginos
+	 * 
 	 * @return String
 	 */
 	public String toString() {

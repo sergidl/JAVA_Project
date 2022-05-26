@@ -16,6 +16,8 @@ public class Ocell extends Base {
 
 	
 	/** 
+	 * Retorna el numero d'embarcacions
+	 * 
 	 * @return int
 	 */
 	public int getEmbarcacions() {
@@ -23,6 +25,8 @@ public class Ocell extends Base {
 	}
 	
 	/** 
+	 * Assigna el numero d'embarcacions
+	 * 
 	 * @param embarcacions
 	 */
 	public void setEmbarcacions(int embarcacions) {
@@ -31,6 +35,8 @@ public class Ocell extends Base {
 
 	
 	/** 
+	 * Retorna si hi ha parasits
+	 * 
 	 * @return boolean
 	 */
 	public boolean getParasits() {
@@ -38,6 +44,8 @@ public class Ocell extends Base {
 	}
 	
 	/** 
+	 * Assigna si hi ha parasits
+	 * 
 	 * @param parasits
 	 */
 	public void setParasits(boolean parasits) {
@@ -46,6 +54,8 @@ public class Ocell extends Base {
 
 	
 	/** 
+	 * Retorna una cadena de caràcters amb les dades de l'ocell
+	 * 
 	 * @return String
 	 */
 	public String toString() {

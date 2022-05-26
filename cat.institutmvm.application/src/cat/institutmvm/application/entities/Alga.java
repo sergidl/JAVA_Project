@@ -16,6 +16,8 @@ public class Alga extends Base {
 
 	
 	/** 
+	 * Retorna la profunditat de l'algà
+	 * 
 	 * @return int
 	 */
 	public int getProfunditat() {
@@ -23,6 +25,8 @@ public class Alga extends Base {
 	}
 	
 	/** 
+	 * Assigna la profunditat de l'algà
+	 * 
 	 * @param profunditat
 	 */
 	public void setProfunditat(int profunditat) {
@@ -31,6 +35,8 @@ public class Alga extends Base {
 
 	
 	/** 
+	 * Retorna la temperatura superficial de l'algà
+	 * 
 	 * @return int
 	 */
 	public int getTemperaturaSuperficial() {
@@ -38,6 +44,8 @@ public class Alga extends Base {
 	}
 	
 	/** 
+	 * Assigna la temperatura superficial de l'algà
+	 * 
 	 * @param temperaturaSuperficial
 	 */
 	public void setTemperaturaSuperficial(int temperaturaSuperficial) {
@@ -46,6 +54,8 @@ public class Alga extends Base {
 
 	
 	/** 
+	 * Retorna una cadena de caràcters amb les dades de l'algà
+	 * 
 	 * @return String
 	 */
 	public String toString() {
